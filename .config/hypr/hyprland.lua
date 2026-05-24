@@ -1,27 +1,12 @@
--- This is an example Hyprland Lua config file.
--- Refer to the wiki for more information.
--- https://wiki.hypr.land/Configuring/Start/
+-- Hyprland init config
 
--- Please note not all available settings / options are set here.
--- For a full list, see the wiki
+local modules = {
+    "monitors",
+}
 
--- You can (and should!!) split this configuration into multiple files
--- Create your files separately and then require them like this:
--- require("myColors")
-
-
-------------------
----- MONITORS ----
-------------------
-
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-    output   = "eDP-1",
-    mode     = "1366x768@60",
-    position = "0x0",
-    scale    = "1",
-})
-
+for _, module in pairs(modules) do
+    require("modules." .. module)
+end
 
 ---------------------
 ---- MY PROGRAMS ----

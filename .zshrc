@@ -1,4 +1,4 @@
-# Created by Zap installer
+# Setup Zap Plugin Manager
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 # Shell Theme
@@ -11,7 +11,7 @@ plug "hlissner/zsh-autopair"
 
 plug "$HOME/.config/zsh/aliases.zsh"
 
-# Load and initialize plugins
+# Initialize plugins
 autoload -Uz compinit
 
 compinit

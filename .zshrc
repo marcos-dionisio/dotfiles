@@ -4,17 +4,14 @@
 # Shell Theme
 eval "$(/home/marcos/.local/bin/oh-my-posh init zsh --config $HOME/.config/zsh/theme.json)"
 
-# Zap plugins
-plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
-
 # Other plugins
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
+
 plug "$HOME/.config/zsh/aliases.zsh"
 
-# Load and initialise plugins
+# Load and initialize plugins
 autoload -Uz compinit
 
 compinit

@@ -11,8 +11,11 @@ plug "zap-zsh/zap-prompt"
 # Other plugins
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-autosuggestions"
+plug "hlissner/zsh-autopair"
 plug "$HOME/.config/zsh/aliases.zsh"
 
-# Load and initialise completion system
+# Load and initialise plugins
 autoload -Uz compinit
+
 compinit
+autopair-init

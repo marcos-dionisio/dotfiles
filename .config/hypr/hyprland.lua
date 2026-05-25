@@ -5,7 +5,7 @@ local modules = {
     "layout",
     "inputs",
     "key-binds",
-    "autostart",
+    "autostart"
 }
 
 for _, module in pairs(modules) do

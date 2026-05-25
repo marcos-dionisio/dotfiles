@@ -11,8 +11,8 @@ hl.config({
 
         col = {
             active_border = "rgba(137, 220, 235, 1)",
-            inactive_border = "rgba(59, 59, 59, 1)",
-        },
+            inactive_border = "rgba(59, 59, 59, 1)"
+        }
     },
 
     decoration = {
@@ -23,12 +23,12 @@ hl.config({
             enabled   = true,
             size      = 2,
             passes    = 0,
-            vibrancy  = 0.1696,
-        },
-    },
+            vibrancy  = 0.1696
+        }
+    }
 })
 
 hl.window_rule({
   match = { class = "kitty" },
-  border_size = 2,
+  border_size = 2
 })

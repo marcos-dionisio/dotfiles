@@ -18,7 +18,7 @@ local binds = {
 
     ["mouse:272"] = hl.dsp.window.drag(),
     ["mouse:273"] = hl.dsp.window.resize(),
-    ["SHIFT + S"] = hl.dsp.window.move({ workspace = "special:magic" }),
+    ["SHIFT + S"] = hl.dsp.window.move({ workspace = "special:magic" })
 }
 
 -- Arrow binds

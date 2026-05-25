@@ -14,6 +14,7 @@ plug "hlissner/zsh-autopair"
 
 plug "$HOME/.config/zsh/history.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/fzf.zsh"
 
 # Initialize plugins
 autoload -Uz compinit

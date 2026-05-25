@@ -1,12 +1,23 @@
+# Git global config
+
 [user]
+
 	name = Marcos Dionisio
-	email = marcos.dionisio@proton.me
+    email = marcos.dionisio@proton.me
+
 [init]
-	defaultBranch = main
+
+    defaultBranch = main
+
 [core]
-	editor = nvim
+
+    editor = nvim
+
 [color]
+
 	ui = auto
-	branch = auto
+    branch = auto
+
 [pull]
+
 	rebase = true

@@ -6,5 +6,5 @@ return {
 
     setup = function()
         require("nvim-tree").setup()
-    end,
+    end
 }

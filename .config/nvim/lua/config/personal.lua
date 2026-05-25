@@ -4,13 +4,13 @@ local vim_global = {
     loaded_netrw = 1,
     loaded_netrwPlugin = 1,
 
-    mapleader = " ",
+    mapleader = " "
 }
 
 local vim_keymaps = {
     { { "n", "v" }, "<leader>t", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle directory tree" } },
     { { "n", "v" }, "<leader>o", "<cmd>Oil<CR>", { desc = "Open oil file manager" } },
-    { { "n", "v" }, "<leader>h", "<cmd>CccHighlighterToggle<CR>", { desc = "Color Picker" } },
+    { { "n", "v" }, "<leader>h", "<cmd>CccHighlighterToggle<CR>", { desc = "Color Picker" } }
 }
 
 local vim_options = {
@@ -35,7 +35,7 @@ local vim_options = {
 
     clipboard = "unnamedplus",
     signcolumn = "yes",
-    mouse = "a",
+    mouse = "a"
 }
 
 for option, value in pairs(vim_global) do

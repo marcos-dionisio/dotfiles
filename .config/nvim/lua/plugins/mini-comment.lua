@@ -4,5 +4,5 @@ return {
 
     setup = function()
         require("mini.comment").setup()
-    end,
+    end
 }

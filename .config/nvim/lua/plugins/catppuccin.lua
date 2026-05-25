@@ -10,5 +10,5 @@ return {
     setup = function(options)
         require("catppuccin").setup(options)
         vim.cmd.colorscheme("catppuccin-nvim")
-    end,
+    end
 }

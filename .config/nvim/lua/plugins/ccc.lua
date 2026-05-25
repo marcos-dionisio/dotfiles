@@ -4,5 +4,5 @@ return {
 
     setup = function()
         require("ccc").setup()
-    end,
+    end
 }

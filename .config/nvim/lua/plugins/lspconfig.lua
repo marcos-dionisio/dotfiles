@@ -3,7 +3,9 @@ return {
     source = "neovim/nvim-lspconfig",
 
     options = {
-        lua_ls = { -- Lua Language Server
+
+        -- Lua Language Server
+        lua_ls = {
             settings = {
                 Lua = {
                     runtime = { version = 'LuaJIT' },
@@ -11,16 +13,16 @@ return {
                         preloadFileSize = 10000,
                         library = {
                             vim.env.VIMRUNTIME,
-                            "/usr/share/hypr/stubs",
-                        },
-                    },
-                },
-            },
-        },
+                            "/usr/share/hypr/stubs"
+                        }
+                    }
+                }
+            }
+        }
     },
 
     setup = function(options)
         vim.lsp.config("lua_ls", options.lua_ls)
         vim.lsp.enable("lua_ls")
-    end,
+    end
 }

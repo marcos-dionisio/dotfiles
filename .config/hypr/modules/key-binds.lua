@@ -6,6 +6,10 @@ local binds = {
     R = hl.dsp.exec_cmd("hyprlauncher"),
     F = hl.dsp.exec_cmd("firefox"),
 
+    P = hl.dsp.exec_cmd("hyprshot -m region -o $HOME/Screenshots"),
+    O = hl.dsp.exec_cmd("hyprshot -m output -o $HOME/Screenshots"),
+    I = hl.dsp.exec_cmd("hyprshot -m window -o $HOME/Screenshots"),
+
     C = hl.dsp.window.close(),
     V = hl.dsp.window.float({ action = "toggle" }),
 

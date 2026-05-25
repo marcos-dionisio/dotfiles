@@ -4,7 +4,7 @@ hl.config({
     general = {
         gaps_in = 5,
         gaps_out = 10,
-        border_size = 2,
+        border_size = 0,
         resize_on_border = true,
 
         layout = "dwindle",
@@ -26,4 +26,9 @@ hl.config({
             vibrancy  = 0.1696,
         },
     },
+})
+
+hl.window_rule({
+  match = { class = "kitty" },
+  border_size = 2,
 })

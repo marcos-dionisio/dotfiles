@@ -1,0 +1,68 @@
+{
+    "logo": {
+        "source": "~/.local/share/fastfetch/ascii/arch.txt",
+        "padding": {
+            "top": 2,
+            "right": 6
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+	"break",
+	"break",
+	{
+            "type": "title",
+            "keyWidth": 10
+        },
+        "break",
+        {
+            "type": "os",
+            "key": " ",
+            "keyColor": "33"
+        },
+        {
+            "type": "kernel",
+            "key": " ",
+            "keyColor": "33"
+        },
+        {
+            "type": "packages",
+            "format": "{} (pacman)",
+            "key": " ",
+            "keyColor": "33"
+        },
+        {
+            "type": "shell",
+            "key": " ",
+            "keyColor": "33"
+        },
+        {
+            "type": "terminal",
+            "key": " ",
+            "keyColor": "33"
+        },
+        {
+            "type": "wm",
+            "key": " ",
+            "keyColor": "33"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+            "keyColor": "33"
+        },
+        "break",
+        {
+            "type": "colors",
+            "block": {
+                "type": "block",
+                "range": [0, 7]
+            }
+        },
+        "break",
+        "break"
+    ]
+}

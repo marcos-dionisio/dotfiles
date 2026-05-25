@@ -1,3 +1,6 @@
+# Show fetch at start!
+fastfetch --config arch
+
 # Setup Zap Plugin Manager
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 

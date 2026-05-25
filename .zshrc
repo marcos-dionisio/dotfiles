@@ -12,6 +12,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
 
+plug "$HOME/.config/zsh/history.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 
 # Initialize plugins

@@ -2,6 +2,8 @@
 
 alias cp="cp -i"
 
+alias ~="cd ~"
+
 alias ls="ls --color"
 alias la="ls --color -a"
 alias ll="ls --color -la"

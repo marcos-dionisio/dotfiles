@@ -3,7 +3,8 @@
         "source": "~/.local/share/fastfetch/ascii/arch.txt",
         "padding": {
             "top": 2,
-            "right": 6
+            "right": 5,
+            "left": 3
         }
     },
     "display": {

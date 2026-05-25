@@ -3,3 +3,10 @@
 	email = marcos.dionisio@proton.me
 [init]
 	defaultBranch = main
+[core]
+	editor = nvim
+[color]
+	ui = auto
+	branch = auto
+[pull]
+	rebase = true

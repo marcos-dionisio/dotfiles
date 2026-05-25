@@ -34,11 +34,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-  match = { class = "discord" },
-  border_size = 0,
-})
-
-hl.window_rule({
-  match = { class = "firefox" },
-  border_size = 0,
+  match = { class = "kitty" },
+  border_size = 2,
 })

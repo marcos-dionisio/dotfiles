@@ -1,3 +1,5 @@
+// Fastfetch config
+
 {
     "logo": {
         "source": "~/.local/share/fastfetch/ascii/arch.txt",

@@ -4,7 +4,7 @@ return {
 
     options = { install_dir = vim.fn.stdpath("data") .. "/site" },
 
-    setup = function(options)
-        require("nvim-treesitter").setup(options)
+    setup = function(self)
+        require("nvim-treesitter").setup(self.options)
     end
 }

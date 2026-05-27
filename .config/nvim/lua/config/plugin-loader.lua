@@ -58,7 +58,7 @@ local function loader()
     vim.pack.add(get_specs_list())
 
     for _, plugin in pairs(get_plugins()) do
-        plugin.setup(plugin.options)
+        plugin:setup()
     end
 end
 

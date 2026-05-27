@@ -7,8 +7,8 @@ return {
         transparent_background = true,
     },
 
-    setup = function(options)
-        require("catppuccin").setup(options)
+    setup = function(self)
+        require("catppuccin").setup(self.options)
         vim.cmd.colorscheme("catppuccin-nvim")
     end
 }

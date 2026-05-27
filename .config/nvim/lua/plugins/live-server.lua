@@ -7,7 +7,7 @@ return {
         browser = true
     },
 
-    setup = function(options)
-        vim.g.live_server = options
+    setup = function(self)
+        vim.g.live_server = self.options
     end
 }

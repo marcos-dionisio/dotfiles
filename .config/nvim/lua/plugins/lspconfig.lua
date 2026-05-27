@@ -21,10 +21,10 @@ return {
         }
     },
 
-    setup = function(options)
+    setup = function(self)
         local blink = require("blink.cmp")
 
-        for server, config in pairs(options) do
+        for server, config in pairs(self.options) do
             config.capabilities = blink.get_lsp_capabilities(config.capabilities)
 
             vim.lsp.config(server, config)

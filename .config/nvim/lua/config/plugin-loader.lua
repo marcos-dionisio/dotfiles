@@ -23,7 +23,7 @@ local function pack_plugin(plugin)
     if plugin.source then
         pack.src = github_parser(plugin.source)
     else
-        pack.src = plugin[1]
+        pack.src = github_parser(plugin[1])
     end
 
     if plugin.name then
@@ -41,8 +41,8 @@ local function get_specs_list()
     local plugins = get_plugins()
     local specs = {}
 
-    for key, plugin in pairs(plugins) do
-        specs[key] = pack_plugin(plugin)
+    for _, plugin in pairs(plugins) do
+        specs[#specs + 1] = pack_plugin(plugin)
 
         if plugin.dependencies then
             for _, dependencie in pairs(plugin.dependencies) do

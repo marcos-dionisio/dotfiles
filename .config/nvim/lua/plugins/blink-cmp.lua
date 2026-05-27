@@ -7,24 +7,10 @@ return {
         "saghen/blink.lib"
     },
 
-    options = {
-        keymap = { preset = "default" },
-        appearance = { nerd_font_variant = "mono" },
-
-        sources = {
-            default = {
-                "lsp",
-                "path",
-                "snippets",
-                "buffer"
-            }
-        }
-    },
-
-    setup = function(options)
+    setup = function()
         local blink = require("blink.cmp")
 
         blink.build():wait(60000)
-        blink.setup(options)
+        blink.setup()
     end
 }

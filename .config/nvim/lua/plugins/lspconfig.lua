@@ -22,7 +22,13 @@ return {
     },
 
     setup = function(options)
-        vim.lsp.config("lua_ls", options.lua_ls)
-        vim.lsp.enable("lua_ls")
+        local blink = require("blink.cmp")
+
+        for server, config in pairs(options) do
+            config.capabilities = blink.get_lsp_capabilities(config.capabilities)
+
+            vim.lsp.config(server, config)
+            vim.lsp.enable(server)
+        end
     end
 }

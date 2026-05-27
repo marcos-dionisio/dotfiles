@@ -10,7 +10,7 @@ return {
     setup = function()
         local blink = require("blink.cmp")
 
-        blink.build():wait(60000)
+        blink.build()
         blink.setup()
     end
 }

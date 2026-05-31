@@ -2,16 +2,17 @@
 
 alias cp="cp -i"
 
-alias ~="cd ~"
-alias ..="cd ../"
-alias ...="cd ../../"
+alias cd="z"
 
-alias .1="cd ../"
-alias .2="cd ../../"
-alias .3="cd ../../../"
-alias .4="cd ../../../../"
-alias .5="cd ../../../../../"
-alias .6="cd ../../../../../../"
+alias ..="z ../"
+alias ...="z ../../"
+
+alias .1="z ../"
+alias .2="z ../../"
+alias .3="z ../../../"
+alias .4="z ../../../../"
+alias .5="z ../../../../../"
+alias .6="z ../../../../../../"
 
 alias ls="eza --group-directories-first --icons"
 alias la="eza --group-directories-first --icons -a"

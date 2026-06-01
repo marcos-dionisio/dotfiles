@@ -7,12 +7,6 @@ local vim_global = {
     mapleader = " "
 }
 
-local vim_keymaps = {
-    { { "n", "v" }, "<leader>t", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle directory tree" } },
-    { { "n", "v" }, "<leader>o", "<cmd>Oil<CR>", { desc = "Open oil file manager" } },
-    { { "n", "v" }, "<leader>h", "<cmd>CccHighlighterToggle<CR>", { desc = "Color Picker" } }
-}
-
 local vim_options = {
     tabstop = 4,
     shiftwidth = 4,
@@ -36,6 +30,17 @@ local vim_options = {
     clipboard = "unnamedplus",
     signcolumn = "yes",
     mouse = "a"
+}
+
+local vim_keymaps = {
+    { { "n", "v", "x" }, "<leader>w", ":w<CR>" },
+    { { "n", "v", "x" }, "<leader>wq", ":wq<CR>" },
+    { { "n", "v", "x" }, "<leader>q", ":q<CR>" },
+    { { "n", "v", "x" }, "<leader>qq", ":q!<CR>" },
+
+    { { "n", "v" }, "<leader>t", ":NvimTreeToggle<CR>" },
+    { { "n", "v" }, "<leader>o", ":Oil<CR>" },
+    { { "n", "v" }, "<leader>h", ":CccHighlighterToggle<CR>" }
 }
 
 for option, value in pairs(vim_global) do

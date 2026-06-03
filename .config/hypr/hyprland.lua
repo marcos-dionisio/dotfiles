@@ -9,5 +9,5 @@ local modules = {
 }
 
 for _, module in pairs(modules) do
-    require("modules." .. module)
+    require("config." .. module)
 end

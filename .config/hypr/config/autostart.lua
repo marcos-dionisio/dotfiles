@@ -1,5 +1,12 @@
 -- Autostart config
 
+local commands = {
+    "hyprlock",
+    "hyprpaper"
+}
+
 hl.on("hyprland.start", function()
-    hl.exec_cmd("hyprpaper")
+    for _, command in pairs(commands) do
+        hl.exec_cmd(command)
+    end
 end)

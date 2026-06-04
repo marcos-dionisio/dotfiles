@@ -16,6 +16,9 @@ local binds = {
     M = hl.dsp.exit(),
     S = hl.dsp.workspace.toggle_special("magic"),
 
+    ["XF86MonBrightnessUp"] = hl.dsp.exec_cmd("brightnessctl set +5%"),
+    ["XF86MonBrightnessDown"] = hl.dsp.exec_cmd("brightnessctl set 5%-"),
+
     ["mouse:272"] = hl.dsp.window.drag(),
     ["mouse:273"] = hl.dsp.window.resize(),
     ["SHIFT + S"] = hl.dsp.window.move({ workspace = "special:magic" })
@@ -36,5 +39,9 @@ end
 
 -- Bind every bind
 for key, value in pairs(binds) do
-    hl.bind("SUPER + " .. key, value)
+    if string.find(key, "^XF86") then
+        hl.bind(key, value)
+    else
+        hl.bind("SUPER + " .. key, value)
+    end
 end

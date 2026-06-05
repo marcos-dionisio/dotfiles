@@ -1,29 +1,21 @@
 -- Plugin Loader
 
-local function github_parser(repository)
+local loader = {
+    plugins = {},
+    specs = {}
+}
+
+function loader:github_parser(repository)
     return "https://github.com/" .. repository
 end
 
-local function get_plugins()
-    local plugins_path = vim.fn.stdpath("config") .. "/lua/plugins/"
-    local plugins_file = vim.fn.readdir(plugins_path)
-    local plugins = {}
-
-    for key, file_name in pairs(plugins_file) do
-        local plugin_path = "plugins." .. file_name:sub(0, -5)
-        plugins[key] = require(plugin_path)
-    end
-
-    return plugins
-end
-
-local function pack_plugin(plugin)
+function loader:pack_plugin(plugin)
     local pack = {}
 
     if plugin.source then
-        pack.src = github_parser(plugin.source)
+        pack.src = self:github_parser(plugin.source)
     else
-        pack.src = github_parser(plugin[1])
+        pack.src = self:github_parser(plugin[1])
     end
 
     if plugin.name then
@@ -37,30 +29,40 @@ local function pack_plugin(plugin)
     return pack
 end
 
-local function get_specs_list()
-    local plugins = get_plugins()
-    local specs = {}
+function loader:setup_plugins()
+    local plugins_path = vim.fn.stdpath("config") .. "/lua/plugins/"
+    local plugins_file = vim.fn.readdir(plugins_path)
 
-    for _, plugin in pairs(plugins) do
-        specs[#specs + 1] = pack_plugin(plugin)
+    for key, file_name in pairs(plugins_file) do
+        local plugin_path = "plugins." .. file_name:sub(0, -5)
+        self.plugins[key] = require(plugin_path)
+    end
+end
+
+function loader:setup_specs_list()
+    for _, plugin in pairs(self.plugins) do
+        self.specs[#self.specs + 1] = self:pack_plugin(plugin)
 
         if plugin.dependencies then
             for _, dependencie in pairs(plugin.dependencies) do
-                specs[#specs + 1] = pack_plugin({ dependencie })
+                self.specs[#self.specs + 1] = self:pack_plugin({ dependencie })
             end
         end
     end
-
-    return specs
 end
 
-local function loader()
-    vim.pack.add(get_specs_list())
-
-    for _, plugin in pairs(get_plugins()) do
+function loader:setup_plugins_config()
+    for _, plugin in pairs(self.plugins) do
         plugin:setup()
     end
 end
 
+function loader:start()
+    self:setup_plugins()
+    self:setup_specs_list()
+    vim.pack.add(self.specs)
+    self:setup_plugins_config()
+end
+
 -- Start plugin loader
-loader()
+loader:start()

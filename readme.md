@@ -12,7 +12,5 @@ Here's how do I set my things, feel free to use or modify!
 ## Installation
 
 ```bash
-git clone git@github.com:marcos-dionisio/dotfiles.git --bare ~/.dotfiles
-git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout -f
-bash ~/.local/share/dotfiles/install.zsh
+bash <(curl https://raw.githubusercontent.com/marcos-dionisio/dotfiles/refs/heads/main/.local/share/dotfiles/install.bash)
 ```

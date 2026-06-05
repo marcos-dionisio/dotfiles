@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 
 sudo pacman -Sy \
     brightnessctl \
@@ -26,7 +26,7 @@ sudo pacman -Sy \
     zoxide \
 
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
-git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout -f
+git clone https://github.com/marcos-dionisio/dotfiles.git --bare $HONE/.dotfiles
+git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout -f

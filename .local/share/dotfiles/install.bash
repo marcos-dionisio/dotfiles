@@ -39,6 +39,7 @@ install_dependencies() {
 install_dotfiles() {
     git clone https://github.com/marcos-dionisio/dotfiles.git --bare $HOME/.dotfiles
     git --work-tree=$HOME --git-dir=$HOME/.dotfiles checkout -f
+    git --work-tree=$HOME --git-dir=$HOME/.dotfiles config status.showUntrackedFiles false
 }
 
 change_shell() {

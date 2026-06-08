@@ -8,30 +8,32 @@ install_paru() {
 }
 
 install_dependencies() {
-    paru -Sy \
-        hyprland \
-        hyprlauncher \
-        hyprlock \
-        hyprpaper \
-        hyprshot \
-        noto-fonts \
-        noto-fonts-cjk \
-        noto-fonts-emoji \
-        noto-fonts-extra \
-        kitty \
-        dolphin \
-        firefox \
-        brightnessctl \
-        zsh \
-        zoxide \
-        eza \
-        bat \
-        fzf \
-        fastfetch \
-        neovim \
-        rust \
-        lua-language-server \
+    packages=(
+        hyprland
+        hyprlauncher
+        hyprlock
+        hyprpaper
+        hyprshot
+        noto-fonts
+        noto-fonts-cjk
+        noto-fonts-emoji
+        noto-fonts-extra
+        kitty
+        dolphin
+        firefox
+        brightnessctl
+        zsh
+        zoxide
+        eza
+        bat
+        fzf
+        fastfetch
+        neovim
+        rust
+        lua-language-server
+    )
 
+    paru -Sy ${packages[@]}
     zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
     curl -s https://ohmyposh.dev/install.sh | bash -s
 }
